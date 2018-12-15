@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1338DBE921C2B15B00DB91D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338DBE821C2B15B00DB91D7 /* AppDelegate.swift */; };
-		1338DBEB21C2B15B00DB91D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338DBEA21C2B15B00DB91D7 /* ViewController.swift */; };
+		1338DBEB21C2B15B00DB91D7 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338DBEA21C2B15B00DB91D7 /* MusicViewController.swift */; };
 		1338DBEE21C2B15B00DB91D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1338DBEC21C2B15B00DB91D7 /* Main.storyboard */; };
 		1338DBF021C2B15E00DB91D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1338DBEF21C2B15E00DB91D7 /* Assets.xcassets */; };
 		1338DBF321C2B15E00DB91D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1338DBF121C2B15E00DB91D7 /* LaunchScreen.storyboard */; };
 		1338DBFE21C2B15E00DB91D7 /* Tap_PlayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338DBFD21C2B15E00DB91D7 /* Tap_PlayTests.swift */; };
 		1338DC0921C2B15E00DB91D7 /* Tap_PlayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338DC0821C2B15E00DB91D7 /* Tap_PlayUITests.swift */; };
+		1338DC1721C2B1ED00DB91D7 /* SomeTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338DC1621C2B1ED00DB91D7 /* SomeTypes.swift */; };
+		13FB037F21C5A9B6008E9129 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FB037E21C5A9B6008E9129 /* HistoryViewController.swift */; };
+		13FB038121C5C030008E9129 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FB038021C5C030008E9129 /* MusicView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		1338DBE521C2B15B00DB91D7 /* Tap&Play.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tap&Play.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1338DBE821C2B15B00DB91D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1338DBEA21C2B15B00DB91D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1338DBEA21C2B15B00DB91D7 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		1338DBED21C2B15B00DB91D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1338DBEF21C2B15E00DB91D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1338DBF221C2B15E00DB91D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		1338DC0421C2B15E00DB91D7 /* Tap&PlayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tap&PlayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1338DC0821C2B15E00DB91D7 /* Tap_PlayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tap_PlayUITests.swift; sourceTree = "<group>"; };
 		1338DC0A21C2B15E00DB91D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1338DC1621C2B1ED00DB91D7 /* SomeTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeTypes.swift; sourceTree = "<group>"; };
+		13FB037E21C5A9B6008E9129 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		13FB038021C5C030008E9129 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				1338DBE821C2B15B00DB91D7 /* AppDelegate.swift */,
-				1338DBEA21C2B15B00DB91D7 /* ViewController.swift */,
+				1338DBEA21C2B15B00DB91D7 /* MusicViewController.swift */,
+				13FB038021C5C030008E9129 /* MusicView.swift */,
+				13FB037E21C5A9B6008E9129 /* HistoryViewController.swift */,
 				1338DBEC21C2B15B00DB91D7 /* Main.storyboard */,
 				1338DBEF21C2B15E00DB91D7 /* Assets.xcassets */,
 				1338DBF121C2B15E00DB91D7 /* LaunchScreen.storyboard */,
 				1338DBF421C2B15E00DB91D7 /* Info.plist */,
+				1338DC1621C2B1ED00DB91D7 /* SomeTypes.swift */,
 			);
 			path = "Tap&Play";
 			sourceTree = "<group>";
@@ -256,8 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1338DBEB21C2B15B00DB91D7 /* ViewController.swift in Sources */,
+				1338DBEB21C2B15B00DB91D7 /* MusicViewController.swift in Sources */,
 				1338DBE921C2B15B00DB91D7 /* AppDelegate.swift in Sources */,
+				13FB038121C5C030008E9129 /* MusicView.swift in Sources */,
+				1338DC1721C2B1ED00DB91D7 /* SomeTypes.swift in Sources */,
+				13FB037F21C5A9B6008E9129 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GDYRU62339;
 				INFOPLIST_FILE = "Tap&Play/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +466,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GDYRU62339;
 				INFOPLIST_FILE = "Tap&Play/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
