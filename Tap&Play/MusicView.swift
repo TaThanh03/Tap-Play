@@ -35,10 +35,11 @@ class MusicView: UIView, MPMediaPickerControllerDelegate {
         self.addGestureRecognizer(swipeRight)
         //music
         myMediaPlayer.setQueue(with: myMusicQuery)
-        myMediaPlayer.repeatMode = .all
         
-        label_status.text = ""
+        label_status.text = "bla bla"
         label_status.textColor = UIColor.white
+        
+        self.addSubview(label_status)
         
         self.displayInSize(size: UIScreen.main.bounds.size)
     }
@@ -53,6 +54,7 @@ class MusicView: UIView, MPMediaPickerControllerDelegate {
             if switch_play == false {
                 myMediaPlayer.play()
                 switch_play = true
+                updateInfo()
             } else {
                 myMediaPlayer.pause()
                 switch_play = false
@@ -63,15 +65,26 @@ class MusicView: UIView, MPMediaPickerControllerDelegate {
         if sender.direction == .left {
             print("swipe left")
             myMediaPlayer.skipToNextItem()
+            updateInfo()
         }
         if sender.direction == .right {
             print("swipe right")
             myMediaPlayer.skipToPreviousItem()
+            updateInfo()
         }
     }
     
+    func updateInfo() {
+        myMediaPlayer.play()
+        let trackInfo = myMediaPlayer.nowPlayingItem
+        let a = trackInfo?.artist
+        let t = trackInfo?.title
+        label_status.text = "title: \(t ?? "no title") artist: \(a ?? "no artist")"
+    }
+    
     func displayInSize(size: CGSize) {
-        
+        let top = 100
+        label_status.frame = CGRect(x: 10, y: top, width: Int(size.width - 20), height: 30)
     }
     
 }
