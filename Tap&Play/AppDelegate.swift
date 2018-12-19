@@ -49,48 +49,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         case .iphone35, .iphone40, .iphone47, .iphone55, .iphone58, .iphone6x:
             print("detected iPhone")
             let vc1 = MusicViewController()
-            let vc2 = HistoryViewController()
+            let vc2 = HistoryViewController(style: .plain)
             let nvc1 = UINavigationController(rootViewController: vc1)
             let nvc2 = UINavigationController(rootViewController: vc2)
-            let tbc = UITabBarController()
+            let tbc = MyCustomTabController()
             tbc.viewControllers = [nvc1, nvc2]
             window?.rootViewController = tbc
+            
         default: //ipad
             print("detected iPad")
-            let vc1 = MusicViewController()
-            let vc2 = HistoryViewController()
+            let svc = MyCustomSplitViewController()
+            let vc1 = HistoryViewController(style: .plain)
+            let vc2 = MusicViewController()
             let nvc1 = UINavigationController(rootViewController: vc1)
             let nvc2 = UINavigationController(rootViewController: vc2)
-            let tbc = UITabBarController()
-            tbc.viewControllers = [nvc1, nvc2]
-            window?.rootViewController = tbc
+            svc.viewControllers = [nvc1, nvc2]
+            svc.delegate = svc //stupide ?
+            svc.preferredDisplayMode = .primaryHidden
+            window?.rootViewController = svc
         }
         window?.makeKeyAndVisible()
         return true
     }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-
 }
 

@@ -1,4 +1,3 @@
-//
 //  HistoryViewController.swift
 //  Tap&Play
 //
@@ -8,30 +7,70 @@
 
 import UIKit
 
-class HistoryViewController: UIViewController {
-    init() {
-        super.init(nibName: nil, bundle: nil)
+class HistoryViewController: UITableViewController {
+
+    override init(style: UITableView.Style) {
+        super.init(style: style)
+        self.tableView.separatorColor = .clear
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        
         let tbi = UITabBarItem(tabBarSystemItem: .history, tag: 2)
         self.tabBarItem = tbi
         self.title = "history" //used by the navigation controller
+        self.clearsSelectionOnViewWillAppear = false
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.view = UIView(frame: UIScreen.main.bounds)
-        self.drawInSize(UIScreen.main.bounds.size)
+    // TableViewDataSource protocol
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        if let tbc = self.tabBarController as? MyCustomTabController {
+            return tbc.content.count
+        }
+        if let svc = self.splitViewController as? MyCustomSplitViewController {
+            return svc.content.count
+        }
+        print("ERROR")
+        return 0
     }
     
-    func drawInSize(_ size:CGSize) {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let tbc = self.tabBarController as? MyCustomTabController {
+            return tbc.content[section].count
+        }
+        if let svc = self.splitViewController as? MyCustomSplitViewController {
+            return svc.content[section].count
+        }
+        print("ERROR")
+        return 0
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        self.drawInSize(size)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellId = "reusedCell"
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellId)
+        var cont : OneCell?
+        if let tbc = self.tabBarController as? MyCustomTabController {
+            cont = tbc.content[indexPath.section][indexPath.row]
+        }
+        if let svc = self.splitViewController as? MyCustomSplitViewController {
+            cont = svc.content[indexPath.section][indexPath.row]
+        }
+        cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
+        cell!.textLabel?.text = cont!.label
+        return cell!
+    }
+    
+    //UITableViewDelegate protocol
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30.0
     }
     
 }

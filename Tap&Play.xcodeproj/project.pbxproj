@@ -15,8 +15,10 @@
 		1338DBFE21C2B15E00DB91D7 /* Tap_PlayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338DBFD21C2B15E00DB91D7 /* Tap_PlayTests.swift */; };
 		1338DC0921C2B15E00DB91D7 /* Tap_PlayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338DC0821C2B15E00DB91D7 /* Tap_PlayUITests.swift */; };
 		1338DC1721C2B1ED00DB91D7 /* SomeTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338DC1621C2B1ED00DB91D7 /* SomeTypes.swift */; };
+		1364863421C9C3A300DB930F /* MyCustomSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1364863321C9C3A300DB930F /* MyCustomSplitViewController.swift */; };
+		137E5A4821C8403200ED91DE /* OneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137E5A4721C8403200ED91DE /* OneCell.swift */; };
+		137E5A4C21C868F100ED91DE /* MyCustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137E5A4B21C868F100ED91DE /* MyCustomTabBarController.swift */; };
 		13FB037F21C5A9B6008E9129 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FB037E21C5A9B6008E9129 /* HistoryViewController.swift */; };
-		13FB038121C5C030008E9129 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FB038021C5C030008E9129 /* MusicView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +53,10 @@
 		1338DC0821C2B15E00DB91D7 /* Tap_PlayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tap_PlayUITests.swift; sourceTree = "<group>"; };
 		1338DC0A21C2B15E00DB91D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1338DC1621C2B1ED00DB91D7 /* SomeTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeTypes.swift; sourceTree = "<group>"; };
+		1364863321C9C3A300DB930F /* MyCustomSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomSplitViewController.swift; sourceTree = "<group>"; };
+		137E5A4721C8403200ED91DE /* OneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCell.swift; sourceTree = "<group>"; };
+		137E5A4B21C868F100ED91DE /* MyCustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomTabBarController.swift; sourceTree = "<group>"; };
 		13FB037E21C5A9B6008E9129 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		13FB038021C5C030008E9129 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,14 +108,16 @@
 			isa = PBXGroup;
 			children = (
 				1338DBE821C2B15B00DB91D7 /* AppDelegate.swift */,
+				137E5A4B21C868F100ED91DE /* MyCustomTabBarController.swift */,
+				1364863321C9C3A300DB930F /* MyCustomSplitViewController.swift */,
 				1338DBEA21C2B15B00DB91D7 /* MusicViewController.swift */,
-				13FB038021C5C030008E9129 /* MusicView.swift */,
 				13FB037E21C5A9B6008E9129 /* HistoryViewController.swift */,
 				1338DBEC21C2B15B00DB91D7 /* Main.storyboard */,
 				1338DBEF21C2B15E00DB91D7 /* Assets.xcassets */,
 				1338DBF121C2B15E00DB91D7 /* LaunchScreen.storyboard */,
 				1338DBF421C2B15E00DB91D7 /* Info.plist */,
 				1338DC1621C2B1ED00DB91D7 /* SomeTypes.swift */,
+				137E5A4721C8403200ED91DE /* OneCell.swift */,
 			);
 			path = "Tap&Play";
 			sourceTree = "<group>";
@@ -265,9 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				137E5A4C21C868F100ED91DE /* MyCustomTabBarController.swift in Sources */,
+				137E5A4821C8403200ED91DE /* OneCell.swift in Sources */,
 				1338DBEB21C2B15B00DB91D7 /* MusicViewController.swift in Sources */,
 				1338DBE921C2B15B00DB91D7 /* AppDelegate.swift in Sources */,
-				13FB038121C5C030008E9129 /* MusicView.swift in Sources */,
+				1364863421C9C3A300DB930F /* MyCustomSplitViewController.swift in Sources */,
 				1338DC1721C2B1ED00DB91D7 /* SomeTypes.swift in Sources */,
 				13FB037F21C5A9B6008E9129 /* HistoryViewController.swift in Sources */,
 			);
